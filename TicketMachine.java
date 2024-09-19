@@ -103,4 +103,20 @@ public class TicketMachine
     {
         return total;
     }
+
+    /**
+     * Return any change if the inserted balance is greater than the price.
+     * Update the balance accordingly.
+     */
+    public int giveChange()
+    {
+        int change = balance;
+        if(balance > 0) {
+            System.out.println("Returning " + balance + " cents in change.");
+            balance = 0;
+        } else {
+            System.out.println("No balance to return as change.");
+        }
+        return change;
+    }
 }
