@@ -74,6 +74,9 @@ public class TicketMachine
             total = total + price;
             // Deduct the price from the balance.
             balance = balance - price;
+
+            // Call giveChange() to return any leftover balance to the customer.
+            giveChange();
         } else {
             System.out.println("Insufficient balance! Please insert at least " + (price - balance) + " more cents.");
         }
