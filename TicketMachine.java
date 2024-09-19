@@ -95,4 +95,12 @@ public class TicketMachine
         }
         return amountToRefund;
     }
+
+    /**
+     * Get the total amount of money collected by the machine.
+     */
+    public int getTotal()
+    {
+        return total;
+    }
 }
